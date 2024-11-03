@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Asus/Downloads/c++ devoirs",
-      "program": "c:/Users/Asus/Downloads/c++ devoirs/build/Debug/outDebug",
+      "cwd": "c:/Users/Asus/Downloads/c++ devoirs/atelier_4/exercice2",
+      "program": "c:/Users/Asus/Downloads/c++ devoirs/atelier_4/exercice2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
