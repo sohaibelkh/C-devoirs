@@ -8,17 +8,14 @@ struct Element
     Element(int value) : data(value), next(nullptr) {}
 };
 
-// Classe pour la liste simplement chaînée
 class LinkedList
 {
 private:
-    Element *head; // Pointeur vers le premier élément de la liste
+    Element *head;
 
 public:
-    // Constructeur pour initialiser une liste vide
     LinkedList() : head(nullptr) {}
 
-    // Destructeur pour libérer la mémoire allouée dynamiquement
     ~LinkedList()
     {
         Element *current = head;
@@ -30,7 +27,6 @@ public:
         }
     }
 
-    // Méthode pour ajouter un élément au début de la liste
     void add(int value)
     {
         Element *newElement = new Element(value);
@@ -38,7 +34,6 @@ public:
         head = newElement;
     }
 
-    // Méthode pour supprimer un élément du début de la liste
     void remove()
     {
         if (head != nullptr)
@@ -53,7 +48,6 @@ public:
         }
     }
 
-    // Méthode pour afficher tous les éléments de la liste
     void display() const
     {
         Element *current = head;
@@ -66,21 +60,17 @@ public:
     }
 };
 
-// Exemple d'utilisation de la classe LinkedList
 int main()
 {
     LinkedList list;
 
-    // Ajouter des éléments
     list.add(10);
     list.add(20);
     list.add(30);
 
-    // Afficher la liste
     std::cout << "Liste après ajouts: ";
     list.display();
 
-    // Supprimer un élément
     list.remove();
     std::cout << "Liste après suppression d'un élément: ";
     list.display();

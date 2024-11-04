@@ -9,7 +9,6 @@ private:
     vector<int> vecteur;
 
 public:
-    // Méthode pour initialiser le vecteur avec 15 entiers pairs non nuls
     void initialise()
     {
         int count = 0;
@@ -21,8 +20,8 @@ public:
 
             if (cin.fail())
             {
-                cin.clear();                                         // Clear error flag
-                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cout << "Entrée invalide. Veuillez saisir un entier pair non nul.\n";
                 continue;
             }
@@ -39,7 +38,6 @@ public:
         }
     }
 
-    // Méthode récursive pour afficher les éléments du vecteur
     void show(size_t index = 0) const
     {
         if (index < vecteur.size())
@@ -53,12 +51,10 @@ public:
         }
     }
 
-    // Déclaration des fonctions amies
     friend double moyenne(const Traitement &t);
     friend double median(const Traitement &t);
 };
 
-// Fonction amie pour calculer la moyenne des éléments du vecteur
 double moyenne(const Traitement &t)
 {
     if (t.vecteur.empty())
@@ -72,7 +68,6 @@ double moyenne(const Traitement &t)
     return static_cast<double>(sum) / t.vecteur.size();
 }
 
-// Fonction amie pour calculer la médiane des éléments du vecteur
 double median(const Traitement &t)
 {
     if (t.vecteur.empty())
@@ -84,12 +79,12 @@ double median(const Traitement &t)
     size_t size = sortedVect.size();
     if (size % 2 == 0)
     {
-        // Si la taille est paire, la médiane est la moyenne des deux éléments centraux
+
         return (sortedVect[size / 2 - 1] + sortedVect[size / 2]) / 2.0;
     }
     else
     {
-        // Si la taille est impaire, la médiane est l'élément central
+
         return sortedVect[size / 2];
     }
 }
